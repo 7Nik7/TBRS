@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TBRS</title>
+  <link href="css/menu.css" rel="stylesheet" type="text/css">
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <link href="css/appli.css" rel="stylesheet" type="text/css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/script.js"></script>
+  
+</head>
+<body>
+   <section class="menu"><div class="up">
+       <ul >
+      <li class="upleft">Working Hours: 08:00 AM - 10:00 PM (Mon-Sun)</li>
+      <li class="upright">Call Us:<a href="tel:+1(999)999-9999"> (999)999-9999</a></li>
+    </ul></div>
+    <div class="low">
+      <div><img src="img/Logo.png" alt=""></div>
+      <div>
+      <ul>
+        <li class="home"><h2><a href="main.html">Home</a></h2></li>
+        <li class="serv"><div class="dropdown">
+  <button class="dropbtn">Servisec</button>
+  <div class="dropdown-content">
+    <a href="standard.html">standard cleaning</a>
+    <a href="deep.html">deep cleaning</a>
+    <a href="move.html">move out/in cleaning</a>
+    <a href="hand.html">handyman</a>
+    <a href="com.html">commercial</a>
+  </div>
+</div></li>
+<li><h2><a href="tel:+1(999)999-9999">call us</a></h2></li>
+    </ul>
+    </div></div>
+  </section>
+
+
+
+
+<div class="appli">
+  <form action="mail.php" method="POST">
+    <H1 class="appli"> Application</H1>
+    <label>Name</label>
+    <input  type="text" class="name" name="user_xname" placeholder="John Smith" required>
+    <label>Mail</label>
+    <input type="email" placeholder="mail" name="user_eemail" placeholder="example@gmail.com" required>
+    <label>Telefon</label>
+    <input type="text" class="phone" name="user_phone" placeholder="+1(123)456-7890">
+    <label>Address</label>
+    <input type="text" name="user_address" placeholder="example st. apt. 1" required>
+    <label>Zip</label>
+    <input type="text" name="user_zip" placeholder="12345" required>
+    <label>Which work</label>
+    <select name="work" id="work">
+      <option class="handy_man">Handyman - please write to us what you need</option>
+      <option class="cl_ean">Cleaning</option>
+    </select>
+    <div id="prod-1" name="Cleaning" style="display: none;">
+      <label>Choose your service</label><br>
+      <select name="class" style="width: 100%; margin-top: 4px;" >
+        <option>standart cleaning</option>
+        <option>Deep cleaning</option>
+        <option>move out cleaning</option>
+      </select>
+
+      <select name="bad" style="width: 100%; margin-top: 4px;" >
+        <option>studio</option>
+        <option>1 bedroom </option>
+        <option>2 bedroom</option>
+        <option >3 bedroom</option>
+        <option >4 bedroom</option>
+        <option >5 bedroom</option>
+        <option >hourly ccleaning</option>
+      </select>
+
+      <select name="sqft" style="width: 100%; margin-top: 4px;" >
+        <option>0-499 Sq Ft</option>
+        <option>500-999 Sq Ft</option>
+        <option>1000-1499 Sq Ft </option>
+        <option >1500-1999 Sq Ft </option>
+        <option >2000-2499 Sq Ft </option>
+        <option >2500-2999 Sq Ft </option>
+        <option > More then 3000 Sq Ft </option>
+      </select>
+
+      <label>How often</label><br>
+      <select name="often" style="width: 100%; margin-top: 4px;" >
+        <option>Just once</option>
+        <option>every week</option>
+        <option>every 2 weeks</option>
+        <option>every month</option>
+
+      </select>
+<script >
+
+document.getElementById('work').addEventListener('change', function(){
+  let isPear = this.options[this.selectedIndex].classList.contains("cl_ean" );
+  document.getElementById('prod-1').style.display = isPear ? "block" : "none";
+});
+document.getElementById('work').addEventListener('change', function(){
+  let isPear = this.options[this.selectedIndex].classList.contains("handy_man" );
+  document.getElementById('prod-2').style.display = isPear ? "block" : "none";
+
+});
+</script>
+
+    <label>Message</label>
+    <textarea name="text" rows="4" placeholder="Tell us more about your needs"></textarea>
+    <button type="submit" class="send-form"><a>submit</a></button>
+    <div class="status"></div>
+  </form>
+
+
+  <script >
+    
+  </script>
+
+</div>
+<footer>
+  <div class="footer">
+    <div class="a">
+    <a class="last" href="https://wa.me/12132078958"><img src="img/icon_whats.png" alt="our whats app"></a>
+    <a href="https://t.me/kompanets777"><img src="img/icon_tele.png" alt="our telegram"></a>
+    <a href="mailto:Nikitakomp7@icloud.com"><img src="img/icon_mail.png" alt="our mail"></a>
+    </div>
+    <h1>you can also contact us here:</h1>
+    
+  </div>
+</footer>
+</body>
+</html>
